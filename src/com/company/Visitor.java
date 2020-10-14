@@ -2,13 +2,13 @@ package com.company;
 
 import java.util.List;
 
-public class Visitors {
+public class Visitor {
     private List <Dish> wishes;
     private int freeTime;
     private int money;
     private List <Limitation> limitations;
 
-    public Visitors(List<Dish> wishes, int freeTime, int money) {
+    public Visitor(List<Dish> wishes, int freeTime, int money) {
         this.wishes = wishes;
         this.freeTime = freeTime;
         this.money = money;
@@ -29,5 +29,14 @@ public class Visitors {
 
     public List<Limitation> getLimitations() {
         return limitations;
+    }
+    public void pay(int price) {
+        money -= price;
+    }
+    public void addWish(Dish dish) {
+        wishes.add(dish);
+    }
+    public void addLimitation(Limitation limitation) {
+        limitations.add(limitation);
     }
 }
