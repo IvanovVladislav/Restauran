@@ -1,4 +1,4 @@
-package com.company;
+package model;
 
 public enum Limitation {
     PEANUT_ALLERGY,

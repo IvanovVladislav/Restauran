@@ -1,4 +1,4 @@
-package com.company;
+package model;
 
 public enum Type {
     SOUP,
@@ -6,5 +6,6 @@ public enum Type {
     SALAD,
     SNACKS,
     HOT_DISH,
-    DESSERT
+    DESSERT,
+    ANOTHER
 }

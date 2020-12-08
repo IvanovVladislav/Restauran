@@ -1,4 +1,7 @@
-package com.company;
+package model;
+
+import model.Dish;
+import model.Limitation;
 
 import java.util.List;
 
@@ -8,11 +11,11 @@ public class Visitor {
     private int money;
     private List <Limitation> limitations;
 
-    public Visitor(List<Dish> wishes, int freeTime, int money) {
+    public Visitor(List<Dish> wishes, int money, int freeTime, List <Limitation> limitations) {
         this.wishes = wishes;
         this.freeTime = freeTime;
         this.money = money;
-
+        this.limitations = limitations;
     }
 
     public List<Dish> getWishes() {
@@ -38,5 +41,11 @@ public class Visitor {
     }
     public void addLimitation(Limitation limitation) {
         limitations.add(limitation);
+    }
+    public void takeTime(int time) {
+        freeTime -= time;
+    }
+    public void removeWish(int i) {
+        wishes.remove(i);
     }
 }

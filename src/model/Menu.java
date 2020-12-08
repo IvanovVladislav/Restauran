@@ -1,4 +1,7 @@
-package com.company;
+package model;
+
+import model.Discount;
+import model.Dish;
 
 import java.util.List;
 
@@ -17,5 +20,11 @@ public class Menu {
 
     public List<Discount> getDiscounts() {
         return discounts;
+    }
+    public void addDish(Dish dish) {
+        dishes.add(dish);
+    }
+    public void addDiscount(Discount discount) {
+        discounts.add(discount);
     }
 }
